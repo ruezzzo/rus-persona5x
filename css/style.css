@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Story+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, html {
+  margin: 0;
+  overflow-x: hidden;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('../media/background-final.png');
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 150px;
+  overflow-x: hidden;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(0,0,0,0.7);
+  padding: 10px 0;
+  
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: visible;  
+}
+
+.header-nav {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.header-nav__item {
+  position: relative;
+}
+
+.header-nav__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.header-nav__link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: url('../media/calling-card.svg') no-repeat center;
+  background-size: contain;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  opacity: 0;
+  z-index: 1;
+}
+
+.header-nav__link:hover::before {
+  width: 150px;
+  height: 150px;
+  opacity: 1;
+}
+
+.nav-icon {
+  position: relative;
+  z-index: 2;
+  height: 60px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.header-nav__link:hover .nav-icon {
+  transform: rotate(15deg) scale(1.1);
+}
+
+
+.info-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;  
+  min-height: 100vh;        
+  padding-top: 120px;       
+}
+
+
+.info-box {
+  width: 1000px;       
+  padding: 30px;
+  background-color: rgba(26, 26, 26, 0.7);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 8px, transparent 12px);
+  background-size: 20px 20px;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.35);
+  border-radius: 12px;
+  color: #fff;
+  
+  min-height: auto; 
+  height: auto;     
+}
+
+
+.info-box img {
+  display: block;
+  margin: 20px auto;
+  max-width: 90%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+
+
+.step { margin-top: 20px; }
+.step-title { font-weight: bold; font-size: 25px; color: #fff; }
+.step-desc { margin-top: 15px; font-size: 16px; color: #fff; }
+
+.download-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.download-btn {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  background-color: #e62626;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.download-btn:hover {
+  background-color: #921414;
+  transform: scale(1.05);
+}
+
+.divider-line {
+  height: 2px;
+  background-color: #555;
+  width: 80%;
+  margin: 30px auto 0;
+}
+
+.highlight-path {
+  color: #ff0000;
+  background-color: #000;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Consolas', monospace;
+}
+
+
+.bottom-section {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background-color: rgb(26,26,26);
+  background-image: radial-gradient(rgba(255,255,255,0.1) 1.5px, transparent 2px);
+  background-size: 15px 15px;
+  color: white;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+}
+
+.icon2 {
+  position: absolute;
+  bottom: 30px;
+  left: 20%;
+  transform: translateX(-50%);
+  height: 60px;
+}
+
+.bottom-text,
+.bottom-text2 {
+  color: white;
+  position: relative;
+  left: 650px;
+  top: 20px;
+  margin-left: 20px;
+}
+
+.bottom-text { font-size: 16px; }
+.bottom-text2 { font-size: 18px; }
+
+
+.faq-item {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 20px;
+    overflow: visible;  
+}
+
+.faq-question {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-answer {
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.6;
+  display: none;
+  padding: 10px 15px;
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.faq-answer.active { display: block; }
+
+.faq-toggle { font-size: 24px; transition: transform 0.3s ease; }
+.faq-toggle.active { transform: rotate(45deg); }
+
+#faq-content { display: none; }
+.content-active { display: block !important; }
+.content-hidden { display: none !important; }
+
+.faq-title {
+  font-weight: bold;
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.faq-desc {
+  margin-top: 5px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+
+.social-link { display: inline-block; width: 60px; height: 60px; margin: 0 10px; }
+.social-icon { width: 100%; height: 100%; object-fit: contain; transition: 0.2s; }
+.social-icon:hover { opacity: 0.8; transform: scale(1.1); }
+
+.com-icon { height: 60px; }
+.community-title { font-weight: bold; font-size: 30px; color: #fff; margin-bottom: 15px; }
+.community-desc { font-size: 16px; color: #fff; line-height: 1.5; }
+
+.img-text { display: flex; align-items: center; gap: 12px; }
+.img-text img { max-width: 400px; height: auto; }
+
+.game-intro {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+  font-family: "Merriweather", serif;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.story-block { display: flex; align-items: flex-start; gap: 20px; margin-top: 20px; }
+.story-text { max-width: 600px; line-height: 1.6; margin-top: 60px; }
+.personaxbox5 { max-width: 150px; height: auto; }
+
+
+@media (max-width: 600px) {
+  .img-text, .story-block {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.community-helpme-icon {
+
+ width: 100%;
+  height: 100%; 
+  object-fit: contain; 
+  transition: 0.2s; }
+
+
+.community-helpme {
+ display: inline-block;
+ width: 60px;
+  height: 60px;
+  margin: 0 10px; }
+
+.community-helpme:hover { opacity: 0.8; transform: scale(1.1); }
